@@ -13,6 +13,8 @@ RUN \
     curl -sL https://github.com/postfixadmin/postfixadmin/archive/refs/tags/postfixadmin-${POSTFIXADMIN_VER}.tar.gz | \
     tar xzf - -C /var/www/html --strip-components=1 && \
     apk --no-cache del build-deps && \
-    sed -i -e "s,/var/www/html,/var/www/html/public,g" /etc/apache2/conf.d/00-default.conf
+    sed -i -e "s,/var/www/html,/var/www/html/public,g" /etc/apache2/conf.d/00-default.conf && \
+    mkdir /var/www/html/templates_c && \
+    chown 8080:8080 /var/www/html/templates_c
 
 USER 8080
