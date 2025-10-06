@@ -1,4 +1,4 @@
-FROM ghcr.io/rkojedzinszky/webhost-images/php82
+FROM ghcr.io/rkojedzinszky/webhost-images/php82:20251006
 
 LABEL org.opencontainers.image.authors "Richard Kojedzinszky <richard@kojedz.in>"
 LABEL org.opencontainers.image.source https://github.com/kubernetize/postfixadmin
